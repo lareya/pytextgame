@@ -1,0 +1,14 @@
+# Agent instructions
+
+## GitHub housekeeping — Marta's standing policy
+
+Applies during every development session. Priority: protect the project first, keep GitHub clean second, minimize storage costs third.
+
+- Before development, check repository status, applicable instructions, storage/build configuration, and unnecessary generated files/artifacts. During work, keep generated outputs out of Git and maintain project-specific .gitignore rules.
+- Preserve source/application files, documentation, configuration, dependencies, lockfiles, reproducible builds, Git history, branches, tags, stable releases/installers, the latest successful Android APK or Windows build for each actively supported platform/channel, and troubleshooting evidence.
+- Before committing/pushing, review the complete diff and staged files for temporary files, duplicate builds/ZIP exports, large unnecessary files, passwords, API keys, tokens, credentials and .env secrets. Never commit secrets. Verify all required project files remain present. Check tracked files' purpose before proposing their removal.
+- Review Actions for redundant work; preserve essential tests and release workflows. Use appropriate concurrency cancellation and focused dependency caching. Avoid large unnecessary caches and intermediate build uploads. Upload only distribution, testing or troubleshooting files actually needed.
+- Set routine development artifact retention explicitly to 7 days; longer retention requires an identified purpose. Preserve the latest successful build per supported platform/channel BEFORE it expires (prefer GitHub Releases for permanent downloads). A 7-day expiry must not destroy the only known working build. Do not implement blanket expiry or deletion without resolving this conflict.
+- Preserve artifacts needed for active debugging, deployment or releases. Verify purpose and obtain authorization before deleting obsolete artifacts; ask whenever uncertain. Never automatically delete source, repositories, important files/release assets, or the only working build. Never rewrite history solely to save storage without explicit approval. Request approval for destructive changes or changes that could affect functionality.
+- After pushing, verify relevant workflows and retention settings where access permits. Report unavailable checks honestly. Check storage usage when available, warn at 75% of the included allowance, and recommend a $0 Actions spending budget when appropriate. Never enable paid storage or raise spending limits without approval. Explain changes that could increase costs. Do not promise continuous monitoring without a configured mechanism.
+- End every development session with a brief report: Project; Cleanup (removed/excluded); Storage saved (measured or unknown); Preserved; GitHub Actions retention/status; Warnings. Never claim cleanup or savings without verification.
